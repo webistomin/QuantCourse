@@ -1,4 +1,0 @@
-# Summary
-
-* [Введение](README.md)
-
