@@ -73,4 +73,27 @@
     color: #333132;
     font-size: 14px;
   }
+
+  @media @screen-md {
+    margin-bottom: 0;
+
+    &__inner {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__title {
+      max-width: initial;
+    }
+
+    &__post {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }

@@ -75,4 +75,37 @@
       }
     }
   }
+
+  @media @screen-md {
+    height: 750px;
+
+    &__title {
+      font-size: 90px;
+      text-transform: uppercase;
+    }
+
+    &__toggler {
+      top: 67px;
+      left: 50px;
+      width: 98px;
+      height: 98px;
+
+      & span {
+        width: 30px;
+        height: 5px;
+
+        &:nth-child(1) {
+          top: 38px;
+        }
+
+        &:nth-child(2) {
+          top: 48px;
+        }
+
+        &:nth-child(3) {
+          top: 58px;
+        }
+      }
+    }
+  }
 }
