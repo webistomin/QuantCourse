@@ -948,6 +948,15 @@ th {
   .posts__excerpt {
     margin-right: 10px;
   }
+  .posts__wrapper {
+    width: auto;
+    margin: 0;
+    margin-right: 40px;
+  }
+  .pagination {
+    margin: 0;
+    width: auto;
+  }
   .pagination__list {
     -webkit-box-pack: start;
             justify-content: flex-start;
@@ -1022,7 +1031,7 @@ th {
   .page-content__inner {
     display: -webkit-box;
     display: flex;
-    max-width: 1150px;
+    max-width: 1090px;
     width: 91.30%;
     margin: 0 auto;
     background-color: #f9f9f9;
