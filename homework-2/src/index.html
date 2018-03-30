@@ -8,8 +8,31 @@
   <title>Личный блог Алексея Истомина</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat|Raleway:100,700" rel="stylesheet">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+<!-- this svg is a container for svg icons and should not appear on the page.
+To emphasise this I use inline style="display: none" -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="icon-vk" viewBox="0 0 800 800">
+    <path d="M393 566c-135 0-208-143-276-285-10-21 6-23 16-23l81-1c12 0 17 9 20 15 13 31 66 142 92 129 18-9 15-107 4-122-7-9-20-12-26-13-5-1 3-11 13-16 18-9 87-9 111-3 28 7 19 32 19 95 0 20-4 50 11 58 24 12 81-101 91-131 3-8 9-11 19-11h85c20 0 27 1 30 8 5 12-9 40-44 87-57 77-65 70-17 114 46 42 55 63 57 66 14 28-11 34-21 34h-76c-9 0-21 0-38-11-29-19-55-70-76-64-17 5-20 34-21 53-1 16-10 21-20 21h-34z"
+    />
+  </symbol>
+  <symbol id="icon-twitter" viewBox="0 0 800 800">
+    <path d="M679 239s-21 34-55 57c7 156-107 329-314 329-103 0-169-50-169-50s81 17 163-45c-83-5-103-77-103-77s23 6 50-2c-93-23-89-110-89-110s23 14 50 14c-84-65-34-148-34-148s76 107 228 116c-22-121 117-177 188-101 37-6 71-27 71-27s-12 41-49 61c30-2 63-17 63-17z"
+    />
+  </symbol>
+  <symbol id="icon-instagram" viewBox="0 0 800 800">
+    <path d="M150 400c0-119 0-166 42-208s88-42 208-42 166 0 208 42 42 89 42 208 0 166-42 208-88 42-208 42-166 0-208-42-42-89-42-208zm455 0c0-114 0-148-29-176-29-29-62-29-176-29s-148 0-176 29c-29 29-29 62-29 176s0 148 29 176c29 29 62 29 176 29s148 0 176-29c29-29 29-62 29-176zM400 272a128 128 0 1 1 0 256 128 128 0 0 1 0-256zm0 211c46 0 83-37 83-83s-37-83-83-83-83 37-83 83 37 83 83 83zm163-216c0 16-13 30-30 30-16 0-30-14-30-30 0-17 14-30 30-30 17 0 30 13 30 30z"
+    />
+  </symbol>
+  <symbol id="icon-search" viewBox="0 0 100 100">
+    <path d="M98.8 95L71.2 67.4c6.3-7.1 10.1-16.5 10.1-26.8C81.2 18.1 63.1 0 40.6 0S0 18.1 0 40.6s18.1 40.6 40.6 40.6c10 0 19.1-3.6 26.1-9.5l27.6 27.6c.6.6 1.9.6 2.5.6s1.9 0 1.9-.6c1.3-1.2 1.3-3.1.1-4.3zM6.2 40.6c0-18.8 15.6-34.4 34.4-34.4S75 21.9 75 40.6 59.4 75 40.6 75 6.2 59.4 6.2 40.6z"
+    />
+  </symbol>
+</svg>
+
+
   <header class="page-header">
     <div class="container">
       <h1 class="page-header__title">Alexey Istomin</h1>
@@ -21,6 +44,10 @@
     </button>
     <nav class="main-nav main-nav--closed">
       <div class="container">
+        <button class="main-nav__btn">
+          <span></span>
+          <span></span>
+        </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a href="#" class="main-nav__link">Начальная страница</a>
@@ -43,16 +70,25 @@
         <section class="socials">
           <ul class="socials__list">
             <li class="socials__item">
-              <a href="#" class="socials__link"></a>
+              <a href="#" class="socials__link">
+                <svg class="socials__icon" width="50" height="50">
+                  <use x="0" y="0" xlink:href="#icon-twitter"></use>
+                </svg>
+              </a>
             </li>
             <li class="socials__item">
-              <a href="#" class="socials__link"></a>
+              <a href="#" class="socials__link">
+                <svg class="socials__icon" width="50" height="50">
+                  <use x="0" y="0" xlink:href="#icon-vk"></use>
+                </svg>
+              </a>
             </li>
             <li class="socials__item">
-              <a href="#" class="socials__link"></a>
-            </li>
-            <li class="socials__item">
-              <a href="#" class="socials__link"></a>
+              <a href="#" class="socials__link">
+                <svg class="socials__icon" width="50" height="50">
+                  <use x="0" y="0" xlink:href="#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </section>
@@ -80,43 +116,18 @@
                   <span class="posts__excerpt">Share</span>
                   <ul class="posts__list">
                     <li class="posts__item">
-                      <a href="#" class="posts__link"></a>
+                      <a href="#" class="posts__link">
+                        <svg class="posts__icon" width="30" height="30">
+                          <use x="0" y="0" xlink:href="#icon-twitter"></use>
+                        </svg>
+                      </a>
                     </li>
                     <li class="posts__item">
-                      <a href="#" class="posts__link"></a>
-                    </li>
-                    <li class="posts__item">
-                      <a href="#" class="posts__link"></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="posts__post">
-              <img src="img/news-2.jpg" alt="#" class="posts__image" width="689" height="513">
-              <div class="posts__desc">
-                <div class="posts__info">
-                  <span class="posts__category">Inspiration</span>
-                  <time class="posts__date">10 April 2016</time>
-                </div>
-                <h2 class="posts__title">Lorem ipsum dolor sit amet, consectetuer</h2>
-                <p class="posts__text">The European languages are members of the same family. Their separate existence is a myth. For science, music,
-                  sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation
-                  and their most common words. Everyone realizes why a new common language would be desirable...</p>
-              </div>
-              <div class="posts__btns">
-                <a href="#" class="posts__btn btn">Read More</a>
-                <div class="posts__socials">
-                  <span class="posts__excerpt">Share</span>
-                  <ul class="posts__list">
-                    <li class="posts__item">
-                      <a href="#" class="posts__link"></a>
-                    </li>
-                    <li class="posts__item">
-                      <a href="#" class="posts__link"></a>
-                    </li>
-                    <li class="posts__item">
-                      <a href="#" class="posts__link"></a>
+                      <a href="#" class="posts__link">
+                        <svg class="posts__icon" width="30" height="30">
+                          <use x="0" y="0" xlink:href="#icon-vk"></use>
+                        </svg>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -140,13 +151,53 @@
                   <span class="posts__excerpt">Share</span>
                   <ul class="posts__list">
                     <li class="posts__item">
-                      <a href="#" class="posts__link"></a>
+                      <a href="#" class="posts__link">
+                        <svg class="posts__icon" width="30" height="30">
+                          <use x="0" y="0" xlink:href="#icon-twitter"></use>
+                        </svg>
+                      </a>
                     </li>
                     <li class="posts__item">
-                      <a href="#" class="posts__link"></a>
+                      <a href="#" class="posts__link">
+                        <svg class="posts__icon" width="30" height="30">
+                          <use x="0" y="0" xlink:href="#icon-vk"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="posts__post">
+              <img src="img/news-2.jpg" alt="#" class="posts__image" width="689" height="513">
+              <div class="posts__desc">
+                <div class="posts__info">
+                  <span class="posts__category">Inspiration</span>
+                  <time class="posts__date">10 April 2016</time>
+                </div>
+                <h2 class="posts__title">Lorem ipsum dolor sit amet, consectetuer</h2>
+                <p class="posts__text">The European languages are members of the same family. Their separate existence is a myth. For science, music,
+                  sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation
+                  and their most common words. Everyone realizes why a new common language would be desirable...</p>
+              </div>
+              <div class="posts__btns">
+                <a href="#" class="posts__btn btn">Read More</a>
+                <div class="posts__socials">
+                  <span class="posts__excerpt">Share</span>
+                  <ul class="posts__list">
+                    <li class="posts__item">
+                      <a href="#" class="posts__link">
+                        <svg class="posts__icon" width="30" height="30">
+                          <use x="0" y="0" xlink:href="#icon-twitter"></use>
+                        </svg>
+                      </a>
                     </li>
                     <li class="posts__item">
-                      <a href="#" class="posts__link"></a>
+                      <a href="#" class="posts__link">
+                        <svg class="posts__icon" width="30" height="30">
+                          <use x="0" y="0" xlink:href="#icon-vk"></use>
+                        </svg>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -180,7 +231,11 @@
           <section class="search">
             <form action="#" class="search__field">
               <input type="search" class="search__input" placeholder="Search name here">
-              <button class="search__button" type="submit"></button>
+              <button class="search__button" type="submit">
+                <svg class="search__icon" width="20" height="20">
+                  <use x="0" y="0" xlink:href="#icon-search"></use>
+                </svg>
+              </button>
             </form>
           </section>
           <section class="recent">
@@ -268,11 +323,12 @@
   <footer class="page-footer">
     <div class="container">
       <div class="page-footer__copyright">
-        <span class="page-footer__text">All Copyright Reserved © Muslim Mahin 2016</span>
+        <span class="page-footer__text">All Copyright Reserved © Istomin Alexey 2018</span>
       </div>
     </div>
   </footer>
 
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

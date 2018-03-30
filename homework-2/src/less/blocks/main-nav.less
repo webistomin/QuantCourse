@@ -1,3 +1,105 @@
 .main-nav {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(16, 16, 16, 0.95);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 12;
+  transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
+  top: 0;
+  left: 0;
+
+  &--opened {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
+  }
+
+  &--closed {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
+  }
+
+  &__list {
+    text-align: center;
+  }
+
+  &__link {
+    font-family: "Raleway", "Arial", sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+    text-align: center;
+    color: #fefefe;
+    opacity: 0.8;
+    transition: opacity .5s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+      transition: opacity .5s ease-in-out,
+    }
+
+    &:active {
+      opacity: 0.3;
+
+    }
+  }
+
+  &__btn {
+    display: block;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: auto;
+    right: 20px;
+    top: 50px;
+    bottom: auto;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
+    & span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -1px;
+      background-color: #ffffff;
+
+      &:nth-child(1) {
+        top: 20px;
+        -webkit-transform: rotate(135deg);
+        -moz-transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+        transform: rotate(135deg);
+        background-color: #ffffff;
+      }
+
+      &:nth-child(2) {
+        top: 20px;
+        -webkit-transform: rotate(-135deg);
+        -moz-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+        background-color: #ffffff;
+      }
+    }
+
+  }
+
+  @media @screen-sm {
+
+    &__btn {
+      right: 50px;
+    }
+
+    &__link {
+      font-size: 60px;
+    }
+  }
 }

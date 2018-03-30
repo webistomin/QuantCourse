@@ -27,9 +27,9 @@
   &__category {
     padding-right: 10px;
     font-family: 'Lato', 'Arial', sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 14px;
-    color: #333132;
+    color: #ed145b;
     position: relative;
 
     &::after {
@@ -101,9 +101,29 @@
     }
   }
 
+  &__socials {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__icon {
+    &:hover {
+      fill: cornflowerblue;
+    }
+  }
+
   @media @screen-lg {
     &__post {
       padding: 22px;
+    }
+
+    &__excerpt {
+      margin-right: 10px;
     }
   }
 }
