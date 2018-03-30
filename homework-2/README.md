@@ -1,4 +1,4 @@
-# Личный проект «Бложик»
+# Личный проект «Бложик» https://webistomin.github.io/QuantCourse/
 
 <table>
   <thead>
